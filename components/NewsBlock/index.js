@@ -1,3 +1,5 @@
+import './style.scss';
+
 const NewsBlock = (props) => {
   return (
     <div className="news-block">

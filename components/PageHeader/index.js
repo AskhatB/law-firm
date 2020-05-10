@@ -30,7 +30,7 @@ const PageHeader = (props) => {
               </Link>
             </li>
             <li>
-              <Link href={`/${lang}/why-us/idea-of-creation`} passHref>
+              <Link href={`/${lang}/news-and-publications/news`} passHref>
                 новости и публикации
               </Link>
             </li>

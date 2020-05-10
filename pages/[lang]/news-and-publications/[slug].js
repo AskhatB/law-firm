@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import Head from 'next/head';
 import { withRouter } from 'next/router';
-import partnerById from '../../../api/partnerById';
+import news from '../../../api/news';
 import PageHeader from '../../../components/PageHeader';
 import Link from 'next/link';
 import PageSidebar from '../../../components/PageSidebar';
@@ -31,10 +31,13 @@ const NewsAndPublications = (props) => {
       <PageHeader />
       <div className="news">
         <div className="container">
-          <div className="content">
-            {/* {
-              props.data.
-            } */}
+          <h1>Новости и публикации</h1>
+        </div>
+        <div className="container">
+          <div className="news__main">
+            {props.data.map((v) => (
+              <NewsBlock {...v} />
+            ))}
           </div>
           <PageSidebar list={menu} />
         </div>
@@ -44,7 +47,7 @@ const NewsAndPublications = (props) => {
 };
 
 NewsAndPublications.getInitialProps = async (ctx) => {
-  const data = await partnerById(ctx.query.slug);
+  const data = await news();
   return {
     data,
   };

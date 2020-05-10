@@ -32,7 +32,11 @@ const Home = (props) => {
                 <a>практики</a>
               </Link>
             </li>
-            <li>новости и публикации</li>
+            <li>
+              <Link href={`/${lang}/news-and-publications/news`}>
+                <a>новости и публикации</a>
+              </Link>
+            </li>
           </ul>
         </nav>
         <header>
