@@ -4,9 +4,10 @@ import { withRouter } from 'next/router';
 import whyUsBySlug from '../../../api/whyUsBySlug';
 import PageHeader from '../../../components/PageHeader';
 import PageSidebar from '../../../components/PageSidebar';
+import { API_ENDPOINT } from '../../../variables/environment';
 
 const WhyUs = (props) => {
-  console.log(props);
+  console.log('API_ENDPOINT', API_ENDPOINT);
   const menu = [
     {
       name: 'Идея создания',
