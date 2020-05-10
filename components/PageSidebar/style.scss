@@ -1,0 +1,25 @@
+@import "../../styles/variables";
+
+.page-sidebar {
+  background-color: $white;
+  border-radius: 5px;
+  padding: 20px;
+  width: 350px;
+  min-width: 350px;
+  margin-left: 30px;
+  height: max-content;
+
+  &__item {
+    user-select: none;
+    cursor: pointer;
+    padding: 12px 8px;
+    border-radius: 5px;
+    &:not(:last-child) {
+      border-bottom: 1px solid $gray;
+    }
+    &:hover, &.active {
+      background-color: $blue;
+      color: $white;
+    }
+  }
+}
