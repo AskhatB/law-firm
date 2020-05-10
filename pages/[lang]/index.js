@@ -22,7 +22,11 @@ const Home = (props) => {
               </Link>
             </li>
 
-            <li>партнёры</li>
+            <li>
+              <Link href={`/${lang}/partners`}>
+                <a>партнёры</a>
+              </Link>
+            </li>
             <li>
               <Link href={`/${lang}/practices`}>
                 <a>практики</a>

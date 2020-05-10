@@ -20,7 +20,7 @@ const PageHeader = (props) => {
               </Link>
             </li>
             <li>
-              <Link href={`/${lang}/why-us/idea-of-creation`} passHref>
+              <Link href={`/${lang}/partners`} passHref>
                 партнёры
               </Link>
             </li>
