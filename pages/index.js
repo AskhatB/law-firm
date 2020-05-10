@@ -1,23 +1,19 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Head from 'next/head';
+import Router from 'next/router';
 
-const Home = () => (
-  <div>
-    <Head>
-      <title>Home</title>
-      <link rel="icon" href="/favicon.ico" />
-    </Head>
+const Home = () => {
+  useEffect(() => {
+    Router.push('/ru');
+  }, []);
+  return (
     <div>
-      <nav>
-        <ul>
-          <li>Почему мы</li>
-          <li>партнёры</li>
-          <li>практики</li>
-          <li>новости и публикации</li>
-        </ul>
-      </nav>
+      <Head>
+        <title>Home</title>
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
     </div>
-  </div>
-);
+  );
+};
 
 export default Home;
