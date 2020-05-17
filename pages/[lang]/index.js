@@ -41,7 +41,7 @@ const Home = (props) => {
         </nav>
         <header>
           <div className="container">
-            <h1>TUKULOV & KASSILGOV LITIGATION LLP</h1>
+            <h1>TUKULOV & KASSILGOV LITIGATION <span>LLP</span></h1>
             <h2>
               Первая в Казахстане юридическая фирма, специализированная в
               области разрешения споров

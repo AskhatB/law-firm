@@ -4,10 +4,11 @@ import './style.scss';
 
 const PageSidebar = (props) => {
   console.log('active', props);
+  const { lang } = props.router.query;
   return (
     <div className="page-sidebar">
       {props.list.map((v) => (
-        <Link href={'/' + v.slug} passHref>
+        <Link href={`/${lang}/practices/${props.active}/${v.slug}`} passHref>
           <a>
             <div
               className={`page-sidebar__item${

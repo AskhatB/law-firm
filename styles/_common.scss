@@ -29,12 +29,16 @@ nav {
     align-items: center;
     justify-content: center;
     list-style: none;
+    margin-bottom: 8px;
     li {
       text-transform: uppercase;
       cursor: pointer;
       user-select: none;
+      line-height: 100%;
       &:not(:last-child) {
-        margin-right: 50px;
+        border-right: 1px solid $dark;
+        padding-right: 20px;
+        margin-right: 20px;
       }
       &:hover {
         color: $red;
@@ -50,15 +54,23 @@ header {
   color: $white;
   background-color: $blue;
   background-image: url('/images/pattern.png');
-  background-size: 1%;
-  height: 60%;
+  background-size: 4%;
+  height: 65%;
   text-transform: uppercase;
   h1 {
-    font-weight: 500;
+    font-weight: normal;
     font-size: 52px;
+    margin: 0 auto;
+    width: max-content;
+    border-bottom: 1px solid $white;
+    margin-bottom: 10px;
+    span {
+      font-size: 32px;
+    }
   }
   h2 {
-    font-size: 16px;
+    font-size: 14px;
+    text-align: center;
   }
 }
 
@@ -76,7 +88,7 @@ header {
     text-transform: uppercase;
     font-weight: 500;
     text-align: center;
-    margin-top: 20px;
+    margin-top: 8px;
   }
 }
 
