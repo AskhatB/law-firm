@@ -49,6 +49,7 @@ nav {
 
 header {
   display: flex;
+  position: relative;
   flex-direction: column;
   justify-content: center;
   color: $white;
@@ -71,6 +72,21 @@ header {
   h2 {
     font-size: 14px;
     text-align: center;
+  }
+  .time {
+    text-align: center;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    div {
+      font-size: 10px;
+      margin-bottom: -5px;
+    }
+    time {
+      font-size: 32px;
+      font-weight: 500;
+    }
   }
 }
 

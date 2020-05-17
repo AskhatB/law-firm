@@ -2,6 +2,7 @@ import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { withRouter } from 'next/router';
+import Clock from 'react-live-clock';
 
 const Home = (props) => {
   const { lang } = props.router.query;
@@ -41,11 +42,21 @@ const Home = (props) => {
         </nav>
         <header>
           <div className="container">
-            <h1>TUKULOV & KASSILGOV LITIGATION <span>LLP</span></h1>
+            <h1>
+              TUKULOV & KASSILGOV LITIGATION <span>LLP</span>
+            </h1>
             <h2>
               Первая в Казахстане юридическая фирма, специализированная в
               области разрешения споров
             </h2>
+            <div className="time">
+              <div>Время в Алматы</div>
+              <Clock
+                format={'HH:mm:ss'}
+                ticking={true}
+                timezone={'Asia/Almaty'}
+              />
+            </div>
           </div>
         </header>
         <div className="main__address">
