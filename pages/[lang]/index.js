@@ -49,19 +49,23 @@ const Home = (props) => {
               Первая в Казахстане юридическая фирма, специализированная в
               области разрешения споров
             </h2>
-            <div className="time">
-              <div>Время в Алматы</div>
-              <Clock
-                format={'HH:mm:ss'}
-                ticking={true}
-                timezone={'Asia/Almaty'}
-              />
-            </div>
           </div>
         </header>
         <div className="main__address">
-          77 KONAEV STREET, ALMATY, KAZAKHSTAN T.: +7 727 321 23 17
-          CONTACT@TKL.KZ
+          <nav>
+            <ul>
+              <li>г. Алматы, ул. Конаева, 77</li>
+              <li>T.: +7 727 321 23 17</li>
+              <li>CONTACT@TKL.KZ</li>
+              <li>
+                <Clock
+                  format={'HH:mm'}
+                  ticking={true}
+                  timezone={'Asia/Almaty'}
+                />
+              </li>
+            </ul>
+          </nav>
         </div>
       </div>
     </>
