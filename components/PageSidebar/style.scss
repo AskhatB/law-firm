@@ -4,16 +4,21 @@
   background-color: $white;
   border-radius: 5px;
   padding: 20px;
-  width: 350px;
-  min-width: 350px;
+  width: 250px;
+  min-width: 250px;
   margin-left: 30px;
   height: max-content;
 
   &__item {
     user-select: none;
     cursor: pointer;
+    text-transform: uppercase;
     padding: 12px 8px;
     border-radius: 5px;
+    font-size: 14px;
+    text-align: center;
+    margin-bottom: 10px;
+    background-color: $gray;
     &:not(:last-child) {
       border-bottom: 1px solid $gray;
     }

@@ -7,11 +7,6 @@ const PageHeader = (props) => {
   return (
     <div className="page-header">
       <div className="container">
-        <Link href={`/${lang}`}>
-          <div className="page-header__logo">
-            TUKULOV & KASSILGOV LITIGATION LLP
-          </div>
-        </Link>
         <div className="page-header__menu">
           <ul>
             <li>
@@ -36,6 +31,9 @@ const PageHeader = (props) => {
             </li>
           </ul>
         </div>
+        <Link href={`/${lang}`}>
+          <div className="page-header__logo"></div>
+        </Link>
       </div>
     </div>
   );

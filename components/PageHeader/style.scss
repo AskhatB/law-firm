@@ -3,17 +3,17 @@
 .page-header {
   display: flex;
   background-color: $blue;
-  height: 100px;
-  margin: 20px;
+  height: 150px;
   background-image: url('/images/pattern.png');
-  background-size: 1%;
-  border-radius: 5px;
+  background-size: 50px;
 
   &__logo {
-    font-weight: 500;
-    color: $white;
-    font-size: 20px;
-    user-select: none;
+    width: 200px;
+    height: 100px;
+    background-image: url("/images/logo-secondary.svg");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
     cursor: pointer;
   }
 

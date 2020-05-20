@@ -19,7 +19,7 @@ const Partners = (props) => {
       <PageHeader />
       <div className="container">
         <h1 className="partners__heading">Партнеры</h1>
-        <div className="partners">
+        {/* <div className="partners">
           {props.data.map((v) => (
             <div className="partners__card">
               <Link href={`/${lang}/partners/${v.slug}`}>
@@ -30,7 +30,7 @@ const Partners = (props) => {
               </Link>
             </div>
           ))}
-        </div>
+        </div> */}
       </div>
     </>
   );

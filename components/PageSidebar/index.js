@@ -4,15 +4,17 @@ import './style.scss';
 
 const PageSidebar = (props) => {
   console.log('active', props);
-  const { lang } = props.router.query;
+  const spitedLink = props.router.asPath.split('/');
+  const link = spitedLink.slice(0, spitedLink.length - 1).join('/');
+  console.log('link', link);
   return (
     <div className="page-sidebar">
       {props.list.map((v) => (
-        <Link href={`/${lang}/practices/${props.active}/${v.slug}`} passHref>
+        <Link href={link + '/' + v.slug}>
           <a>
             <div
               className={`page-sidebar__item${
-                props.active === v.slug ? ' active' : ''
+                props.active === v.slug.toString() ? ' active' : ''
               }`}
             >
               {v.name}

@@ -1,22 +1,18 @@
 import React, { useEffect } from 'react';
 import Head from 'next/head';
 import { withRouter } from 'next/router';
-import whyUsBySlug from '../../../api/whyUsBySlug';
+import aboutList from '../../../api/aboutList';
+import aboutById from '../../../api/aboutById';
 import PageHeader from '../../../components/PageHeader';
 import PageSidebar from '../../../components/PageSidebar';
-import { API_ENDPOINT } from '../../../variables/environment';
 
 const WhyUs = (props) => {
-  const menu = [
-    {
-      name: 'Идея создания',
-      slug: 'idea-of-creation',
-    },
-    {
-      name: 'Чем мы отличаемся от конкурентов',
-      slug: 'how-do-we-differ-from-our-competitors',
-    },
-  ];
+  console.log(props);
+  const menu = props.list.map((v) => {
+    v.name = v[`title_${props.router.query.lang}`];
+    v.slug = v.id;
+    return v;
+  });
   return (
     <>
       <Head>
@@ -29,8 +25,11 @@ const WhyUs = (props) => {
       <div className="why-us">
         <div className="container">
           <div className="content">
-            <h1>{props.data.title}</h1>
-            <p>{props.data.content}</p>
+            <div
+              dangerouslySetInnerHTML={{
+                __html: props.data[`content_${props.router.query.lang}`],
+              }}
+            ></div>
           </div>
           <PageSidebar list={menu} active={props.router.query.slug} />
         </div>
@@ -40,8 +39,10 @@ const WhyUs = (props) => {
 };
 
 WhyUs.getInitialProps = async (ctx) => {
-  const data = await whyUsBySlug(ctx.query.slug);
+  const list = await aboutList();
+  const data = await aboutById(ctx.query.slug);
   return {
+    list,
     data,
   };
 };

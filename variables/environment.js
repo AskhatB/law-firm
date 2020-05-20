@@ -1,4 +1,1 @@
-export const API_ENDPOINT =
-  process.env.NODE_ENV === 'development'
-    ? 'http://localhost:3000'
-    : 'http://theinstamart.com:5050';
+export const API_ENDPOINT = 'http://161.35.194.235:1337';
