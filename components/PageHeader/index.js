@@ -10,7 +10,7 @@ const PageHeader = (props) => {
         <div className="page-header__menu">
           <ul>
             <li>
-              <Link href={`/${lang}/why-us/idea-of-creation`} passHref>
+              <Link href={`/${lang}/why-us/1`} passHref>
                 <a>Почему мы</a>
               </Link>
             </li>

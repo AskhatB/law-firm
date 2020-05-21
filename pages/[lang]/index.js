@@ -18,7 +18,7 @@ const Home = (props) => {
         <nav>
           <ul>
             <li>
-              <Link href={`/${lang}/why-us/idea-of-creation`}>
+              <Link href={`/${lang}/why-us/1`}>
                 <a>Почему мы</a>
               </Link>
             </li>
