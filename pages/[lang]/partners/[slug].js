@@ -21,31 +21,31 @@ const Partners = (props) => {
         <div className="partner-page">
           <div className="partner-page__side">
             <img src={props.data.image} />
-            <div className="name">{props.data.name}</div>
+            <div className="name">{props.data[`name_${lang}`]}</div>
             <div className="partner-page__skills">
               <div className="heading">Образование:</div>
-              {props.data.edu.map((v) => (
+              {props.data[`edu_${lang}`].map((v) => (
                 <p>{v}</p>
               ))}
             </div>
             <div className="partner-page__skills">
               <div className="heading">Языки:</div>
-              {props.data.lang.map((v) => (
+              {props.data[`lang_${lang}`].map((v) => (
                 <p>{v}</p>
               ))}
             </div>
             <div className="partner-page__skills">
               <div className="heading">Деятельность/членства:</div>
-              {props.data.activities.map((v) => (
+              {props.data[`activities_${lang}`].map((v) => (
                 <p>{v}</p>
               ))}
             </div>
           </div>
           <div
             className="partner-page__content"
-            dangerouslySetInnerHTML={{ __html: props.data.content }}
+            dangerouslySetInnerHTML={{ __html: props.data[`content_${lang}`] }}
           ></div>
-          <div className="partner-page__side">
+          {/* <div className="partner-page__side">
             {props.data.awards.map((v) => (
               <div className="partner-page__award">
                 <div className="image">
@@ -55,7 +55,7 @@ const Partners = (props) => {
                 <p>{v.content}</p>
               </div>
             ))}
-          </div>
+          </div> */}
         </div>
       </div>
     </>
@@ -63,7 +63,7 @@ const Partners = (props) => {
 };
 
 Partners.getInitialProps = async (ctx) => {
-  const data = await partnerById(ctx.query.slug);
+  let data = await partnerById(ctx.query.slug);
   return {
     data,
   };

@@ -21,18 +21,20 @@ const Partners = (props) => {
         <h1 className="partners__heading">
           Партнеры<div className="heading-bottom-sign"></div>
         </h1>
-        {/* <div className="partners">
+        <div className="partners">
           {props.data.map((v) => (
             <div className="partners__card">
-              <Link href={`/${lang}/partners/${v.slug}`}>
+              <Link href={`/${lang}/partners/${v.id}`}>
                 <a>
-                  <img src={v.image} />
-                  <div className="partners__card-name">{v.name}</div>
+                  <div className="image">
+                    <img src={v.avatar_link} />
+                  </div>
+                  <div className="partners__card-name">{v[`name_${lang}`]}</div>
                 </a>
               </Link>
             </div>
           ))}
-        </div> */}
+        </div>
       </div>
     </>
   );

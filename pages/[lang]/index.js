@@ -22,7 +22,6 @@ const Home = (props) => {
                 <a>Почему мы</a>
               </Link>
             </li>
-
             <li>
               <Link href={`/${lang}/partners`}>
                 <a>партнёры</a>
