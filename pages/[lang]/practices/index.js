@@ -1,9 +1,7 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import Head from 'next/head';
 import { withRouter } from 'next/router';
-import whyUsBySlug from '../../../api/whyUsBySlug';
 import PageHeader from '../../../components/PageHeader';
-import PageSidebar from '../../../components/PageSidebar';
 import practices from '../../../api/practices';
 import Link from 'next/link';
 
@@ -21,12 +19,14 @@ const Practices = (props) => {
       <PageHeader />
       <div className="practices">
         <div className="container">
-          <h1>Практики</h1>
+          <h1>
+            Практики<div className="heading-bottom-sign"></div>
+          </h1>
           <div className="practices__cards">
             {props.data.map((v) => (
               <div className="practices__card">
-                <Link href={`/${lang}/practices/${v.slug}/administrativnye-spory`}>
-                  <a>{v.title}</a>
+                <Link href={`/${lang}/practices/${v.id}/${v.practices[0].id}`}>
+                  <a>{v[`name_${lang}`]}</a>
                 </Link>
               </div>
             ))}
@@ -38,7 +38,7 @@ const Practices = (props) => {
   );
 };
 
-Practices.getInitialProps = async (ctx) => {
+Practices.getInitialProps = async () => {
   const data = await practices();
   return {
     data,

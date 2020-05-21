@@ -34,7 +34,7 @@ const Home = (props) => {
               </Link>
             </li>
             <li>
-              <Link href={`/${lang}/news-and-publications/news`}>
+              <Link href={`/${lang}/news`}>
                 <a>новости и публикации</a>
               </Link>
             </li>

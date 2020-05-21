@@ -18,7 +18,9 @@ const Partners = (props) => {
       </Head>
       <PageHeader />
       <div className="container">
-        <h1 className="partners__heading">Партнеры</h1>
+        <h1 className="partners__heading">
+          Партнеры<div className="heading-bottom-sign"></div>
+        </h1>
         {/* <div className="partners">
           {props.data.map((v) => (
             <div className="partners__card">

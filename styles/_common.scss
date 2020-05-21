@@ -123,24 +123,40 @@ header {
 }
 
 .practices {
+  padding-top: 80px;
+  color: $blue;
   h1 {
     font-size: 24px;
     margin-bottom: 40px;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    width: max-content;
+    margin: 0 auto 50px;
+    .heading-bottom-sign {
+      &::after {
+        width: 64px;
+        left: -74px;
+      }
+      &::before {
+        width: 64px;
+        right: -74px;
+      }
+    }
   }
 
   &__card {
     display: flex;
+    background-color: $gray;
     justify-content: center;
     align-items: center;
     text-align: center;
     padding: 25px;
     margin-bottom: 30px;
     width: 30%;
-    height: 195px;
-    background-color: $white;
+    height: 125px;
     border-radius: 5px;
     font-weight: bold;
-    font-size: 24px;
     text-transform: uppercase;
     cursor: pointer;
     user-select: none;
@@ -159,7 +175,6 @@ header {
 .partners {
   display: flex;
   justify-content: center;
-  margin-top: 30px;
 
   &__card {
     cursor: pointer;
@@ -172,9 +187,23 @@ header {
   }
 
   &__heading {
-    text-align: center;
-    font-weight: bold;
     font-size: 24px;
+    margin-bottom: 40px;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    width: max-content;
+    margin: 80px auto 50px;
+    .heading-bottom-sign {
+      &::after {
+        width: 64px;
+        left: -74px;
+      }
+      &::before {
+        width: 64px;
+        right: -74px;
+      }
+    }
   }
 }
 
@@ -253,19 +282,38 @@ header {
 }
 
 .news {
+  padding: 70px 0 0;
   h1 {
     font-size: 24px;
     margin-bottom: 40px;
   }
   &__main {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
   }
   .container {
     display: flex;
+    justify-content: space-between;
   }
   .content {
     width: 100%;
+  }
+}
+
+.heading-bottom-sign {
+  position: relative;
+  margin: auto;
+  width: 16px;
+  height: 16px;
+  border: 2px solid $blue;
+  margin-top: 15px;
+  border-radius: 50%;
+  &::after,
+  &::before {
+    content: '';
+    display: block;
+    height: 2px;
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    background-color: $blue;
   }
 }

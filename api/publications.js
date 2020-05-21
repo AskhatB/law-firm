@@ -1,10 +1,10 @@
 import fetch from 'isomorphic-unfetch';
 import { API_ENDPOINT } from '../variables/environment';
 
-const practices = async (id) => {
-  const res = await fetch(`${API_ENDPOINT}/practice-mains/${id}`);
+const publications = async () => {
+  const res = await fetch(`${API_ENDPOINT}/publications`);
   const data = await res.json();
   return data;
 };
 
-export default practices;
+export default publications;

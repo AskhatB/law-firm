@@ -1,1 +1,1 @@
-export const API_ENDPOINT = 'http://161.35.194.235:1337';
+export const API_ENDPOINT = 'https://admin.tkl.kz';

@@ -8,13 +8,15 @@ import translit from '../../../../services/translit';
 
 const Practices = (props) => {
   console.log('practices', props);
-  const menu = props.data.sub.map((v) => {
-    return {
-      name: v.title,
-      slug: translit(v.title),
-    };
+  const { lang } = props.router.query;
+  const menu = props.data.practices.map((v) => {
+    v.name = v[`name_${lang}`];
+    v.slug = v.id;
+    return v;
   });
-  const sub = props.data.sub.find((x) => x.slug === props.router.query.subslug);
+  const content = props.data.practices.find(
+    (x) => x.id === +props.router.query.subslug
+  )[`content_${lang}`];
   return (
     <>
       <Head>
@@ -27,12 +29,9 @@ const Practices = (props) => {
       <div className="why-us">
         <div className="container">
           <div className="content">
-            <h1>{sub.title}</h1>
-            {sub.content.map((x) => (
-              <p>{x}</p>
-            ))}
+            <p dangerouslySetInnerHTML={{ __html: content }}></p>
           </div>
-          <PageSidebar list={menu} active={props.router.query.slug} />
+          <PageSidebar list={menu} active={props.router.query.subslug} />
         </div>
       </div>
     </>

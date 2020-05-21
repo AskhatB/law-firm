@@ -7,7 +7,7 @@ import Link from 'next/link';
 import PageSidebar from '../../../components/PageSidebar';
 import NewsBlock from '../../../components/NewsBlock';
 
-const NewsAndPublications = (props) => {
+const News = (props) => {
   const { lang } = props.router.query;
   console.log(props);
   const menu = [
@@ -31,26 +31,23 @@ const NewsAndPublications = (props) => {
       <PageHeader />
       <div className="news">
         <div className="container">
-          <h1>Новости и публикации</h1>
-        </div>
-        <div className="container">
           <div className="news__main">
             {props.data.map((v) => (
               <NewsBlock {...v} />
             ))}
           </div>
-          <PageSidebar list={menu} />
+          <PageSidebar list={menu} active="news" />
         </div>
       </div>
     </>
   );
 };
 
-NewsAndPublications.getInitialProps = async (ctx) => {
+News.getInitialProps = async (ctx) => {
   const data = await news();
   return {
     data,
   };
 };
 
-export default withRouter(NewsAndPublications);
+export default withRouter(News);
