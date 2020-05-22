@@ -1,4 +1,5 @@
 import './style.scss';
+import Link from 'next/link';
 import { monthes } from '../../variables';
 import { withRouter } from 'next/router';
 
@@ -10,13 +11,17 @@ const NewsBlock = (props) => {
   }-${date.getFullYear()}`;
   // console.log('news', date, created);
   return (
-    <div className="news-block">
-      <div className="date">{created}</div>
-      <div>
-        <div className="heading">{props[`title_${lang}`]}</div>
-        <div className="preview">{props[`content_${lang}`]}</div>
-      </div>
-    </div>
+    <Link href={`${lang}/news/${props.id}`}>
+      <a>
+        <div className="news-block">
+          <div className="date">{created}</div>
+          <div>
+            <div className="heading">{props[`title_${lang}`]}</div>
+            <div className="preview">{props[`content_${lang}`]}</div>
+          </div>
+        </div>
+      </a>
+    </Link>
   );
 };
 

@@ -21,9 +21,14 @@ const Partners = (props) => {
         <div className="partner-page">
           <div className="partner-page__side">
             <img src={props.data.avatar_link} />
-            <div className="name">{props.data[`name_${lang}`]}</div>
+            <div className="name">
+              {props.data[`name_${lang}`]}
+              <a target="__blank" href={props.data.linkedin}>
+                <span class="i-linkedin"></span>
+              </a>
+            </div>
             <div className="phones d-flex">
-              M:
+              M.: <div className="separator"></div>
               <div>
                 {props.data.m_phone.map((v) => (
                   <>
@@ -33,8 +38,8 @@ const Partners = (props) => {
                 ))}
               </div>
             </div>
-            <div className="phones">
-              D:
+            <div className="phones d-flex">
+              D.:<div className="separator"></div>
               {props.data.d_phone.map((v) => (
                 <>
                   {v}
@@ -42,7 +47,10 @@ const Partners = (props) => {
                 </>
               ))}
             </div>
-            <div className="email">E: {props.data.email}</div>
+            <div className="email d-flex">
+              E.: <div className="separator"></div>
+              {props.data.email};
+            </div>
             <div className="partner-page__skills">
               <div className="heading">Образование:</div>
               {props.data[`edu_${lang}`].map((v) => (
@@ -51,15 +59,19 @@ const Partners = (props) => {
             </div>
             <div className="partner-page__skills">
               <div className="heading">Языки:</div>
-              {props.data[`lang_${lang}`].map((v) => (
-                <p>{v}</p>
-              ))}
+              <ul>
+                {props.data[`lang_${lang}`].map((v) => (
+                  <li>{v}</li>
+                ))}
+              </ul>
             </div>
             <div className="partner-page__skills">
-              <div className="heading">Деятельность/членства:</div>
-              {props.data[`activities_${lang}`].map((v) => (
-                <p>{v}</p>
-              ))}
+              <div className="heading">Деятельность / членства:</div>
+              <ul>
+                {props.data[`activities_${lang}`].map((v) => (
+                  <li class="m-b-10">{v}</li>
+                ))}
+              </ul>
             </div>
           </div>
           <div
@@ -67,6 +79,7 @@ const Partners = (props) => {
             dangerouslySetInnerHTML={{ __html: props.data[`content_${lang}`] }}
           ></div>
           <div className="partner-page__side">
+            <div class="award-heading">Награды:</div>
             {props.data.personal_rewards.map((v) => (
               <div className="partner-page__award">
                 <div className="image">

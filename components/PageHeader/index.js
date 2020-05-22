@@ -16,7 +16,7 @@ const PageHeader = (props) => {
             </li>
             <li>
               <Link href={`/${lang}/partners`} passHref>
-                партнёры
+                партнеры
               </Link>
             </li>
             <li>

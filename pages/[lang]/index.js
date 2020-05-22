@@ -24,7 +24,7 @@ const Home = (props) => {
             </li>
             <li>
               <Link href={`/${lang}/partners`}>
-                <a>партнёры</a>
+                <a>партнеры</a>
               </Link>
             </li>
             <li>
@@ -53,7 +53,7 @@ const Home = (props) => {
         <div className="main__address">
           <nav>
             <ul>
-              <li><span>г.</span>Алматы, <span>ул.</span> Конаева, 77</li>
+              <li><span>г. </span>Алматы, <span>ул.</span> Конаева, 77</li>
               <li><span>т.</span>: +7 727 321 23 17</li>
               <li>CONTACT@TKL.KZ</li>
               <li>

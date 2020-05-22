@@ -36,6 +36,7 @@ nav {
     justify-content: center;
     list-style: none;
     margin-bottom: 15px;
+    font-size: 18px;
     li {
       text-transform: uppercase;
       cursor: pointer;
@@ -63,7 +64,7 @@ header {
   background-color: $blue;
   background-image: url('/images/pattern.png');
   background-size: 50px;
-  height: 550px;
+  height: 520px;
   text-transform: uppercase;
   h1 {
     font-family: 'Work Sans', sans-serif;
@@ -78,13 +79,15 @@ header {
     }
   }
   h2 {
-    font-size: 14px;
+    font-size: 18px;
     text-align: center;
+    white-space: nowrap;
+    margin-left: -20px;
   }
 }
 
 .container {
-  width: 1070px;
+  width: 1200px;
   margin: auto;
 }
 
@@ -200,12 +203,12 @@ header {
   justify-content: center;
 
   &__card {
-    width: 255px;
+    width: 200px;
     background-color: $gray;
     cursor: pointer;
     .image {
       width: 100%;
-      height: 300px;
+      height: 250px;
       img {
         width: 100%;
         height: 100%;
@@ -216,16 +219,18 @@ header {
       font-weight: bold;
       text-transform: uppercase;
       margin: 30px 0;
+      font-size: 14px;
       text-align: center;
+      color: $blue;
     }
     &:not(:last-child) {
-      margin-right: 150px;
+      margin-right: 100px;
     }
   }
 
   &__heading {
     color: $blue;
-    font-size: 24px;
+    font-size: 20px;
     margin-bottom: 40px;
     font-weight: bold;
     text-align: center;
@@ -255,7 +260,6 @@ header {
     min-width: 23%;
     background-color: $white;
     border-radius: 5px;
-    
     font-weight: bold;
     text-transform: uppercase;
     &:first-child {
@@ -265,12 +269,27 @@ header {
       margin-left: 15px;
     }
     .name {
+      display: flex;
+      align-items: center;
+      justify-content: center;
       white-space: nowrap;
       margin-top: 15px;
       margin-bottom: 15px;
       color: $blue;
       text-align: center;
       font-size: 18px;
+      span {
+        margin-left: 12px;
+      }
+    }
+
+    .award-heading  {
+      text-align: center;
+      font-style: italic;
+      font-style: 14px;
+      text-transform: capitalize;
+      margin-bottom: 35px;
+      color: $blue;
     }
 
     .phones, .email {
@@ -281,7 +300,9 @@ header {
     }
 
     img {
-      width: 100%;
+      width: 200px;
+      display: block;
+      margin: 0 auto;
     }
   }
 
@@ -290,6 +311,11 @@ header {
     border-radius: 5px;
     padding: 0 25px;
     font-size: 14px;
+    text-align: justify;
+    border-right: 2px solid #eeeeee;
+    li {
+      padding-left: 5px;
+    }
   }
 
   &__skills {
@@ -306,6 +332,9 @@ header {
       font-weight: normal;
       margin-bottom: 10px;
     }
+    li {
+      font-weight: normal;
+    }
   }
 
   &__award {
@@ -315,6 +344,7 @@ header {
     flex-direction: column;
     align-items: center;
     margin-bottom: 20px;
+    text-align: center;
     .heading {
       color: $blue;
       margin-top: 10px;
@@ -322,6 +352,7 @@ header {
     p {
       font-weight: normal;
       margin-top: 10px;
+      font-style: italic;
     }
     .image {
       width: 80px;
@@ -368,4 +399,23 @@ header {
     transform: translate(0, -50%);
     background-color: $bright-blue;
   }
+}
+
+
+.separator {
+  width: 10px;
+}
+
+.i-linkedin {
+  display: block;
+  width: 18px;
+  height: 18px;
+  background-image: url("/images/linkedin.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.m-b-10 {
+  margin-bottom: 10px;
 }
