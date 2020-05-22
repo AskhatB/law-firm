@@ -53,8 +53,8 @@ const Home = (props) => {
         <div className="main__address">
           <nav>
             <ul>
-              <li>г. Алматы, ул. Конаева, 77</li>
-              <li>T.: +7 727 321 23 17</li>
+              <li>Алматы, ул. Конаева, 77</li>
+              <li>т.: +7 727 321 23 17</li>
               <li>CONTACT@TKL.KZ</li>
               <li>
                 <Clock

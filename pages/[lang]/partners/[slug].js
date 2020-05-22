@@ -20,8 +20,29 @@ const Partners = (props) => {
       <div className="container">
         <div className="partner-page">
           <div className="partner-page__side">
-            <img src={props.data.image} />
+            <img src={props.data.avatar_link} />
             <div className="name">{props.data[`name_${lang}`]}</div>
+            <div className="phones d-flex">
+              M:
+              <div>
+                {props.data.m_phone.map((v) => (
+                  <>
+                    {v}
+                    <br />
+                  </>
+                ))}
+              </div>
+            </div>
+            <div className="phones">
+              D:
+              {props.data.d_phone.map((v) => (
+                <>
+                  {v}
+                  <br />
+                </>
+              ))}
+            </div>
+            <div className="email">E: {props.data.email}</div>
             <div className="partner-page__skills">
               <div className="heading">Образование:</div>
               {props.data[`edu_${lang}`].map((v) => (
@@ -45,17 +66,17 @@ const Partners = (props) => {
             className="partner-page__content"
             dangerouslySetInnerHTML={{ __html: props.data[`content_${lang}`] }}
           ></div>
-          {/* <div className="partner-page__side">
-            {props.data.awards.map((v) => (
+          <div className="partner-page__side">
+            {props.data.personal_rewards.map((v) => (
               <div className="partner-page__award">
                 <div className="image">
-                  <img src={v.image} />
+                  <img src={v.image_url} />
                 </div>
-                <div className="heading">{v.title}</div>
-                <p>{v.content}</p>
+                <div className="heading">{v[`name_${lang}`]}</div>
+                <p>{v[`descr_${lang}`]}</p>
               </div>
             ))}
-          </div> */}
+          </div>
         </div>
       </div>
     </>
