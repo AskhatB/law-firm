@@ -14,9 +14,9 @@ const Practices = (props) => {
     v.slug = v.id;
     return v;
   });
-  const content = props.data.practices.find(
+  const parctice = props.data.practices.find(
     (x) => x.id === +props.router.query.subslug
-  )[`content_${lang}`];
+  );
   return (
     <>
       <Head>
@@ -26,10 +26,11 @@ const Practices = (props) => {
         </title>
       </Head>
       <PageHeader />
-      <div className="why-us">
+      <div className="practice-one">
         <div className="container">
           <div className="content">
-            <p dangerouslySetInnerHTML={{ __html: content }}></p>
+            <h1>{parctice[`name_${lang}`]}</h1>
+            <div dangerouslySetInnerHTML={{ __html: parctice[`content_${lang}`] }}></div>
           </div>
           <PageSidebar list={menu} active={props.router.query.subslug} />
         </div>

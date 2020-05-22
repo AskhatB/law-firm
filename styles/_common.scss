@@ -15,6 +15,10 @@ body {
   font-family: 'Montserrat', sans-serif;
 }
 
+ul {
+  padding-left: 20px;
+}
+
 a {
   font-size: inherit;
   color: inherit;
@@ -26,6 +30,7 @@ a {
 
 nav {
   ul {
+    padding: 0;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -108,7 +113,9 @@ header {
 .content {
   background-color: $white;
   border-radius: 5px;
-  padding: 20px;
+  text-align: justify;
+  
+  margin-right: 64px;
   h1 {
     font-size: 24px;
     font-weight: bold;
@@ -121,7 +128,7 @@ header {
 
 .why-us {
   display: flex;
-  padding: 30px 0;
+  padding: 50px 0;
   .container {
     display: flex;
   }
@@ -140,12 +147,12 @@ header {
     margin: 0 auto 50px;
     .heading-bottom-sign {
       &::after {
-        width: 64px;
-        left: -74px;
+        width: 55px;
+        left: -65px;
       }
       &::before {
-        width: 64px;
-        right: -74px;
+        width: 55px;
+        right: -65px;
       }
     }
   }
@@ -160,8 +167,7 @@ header {
     margin-bottom: 30px;
     width: 30%;
     height: 125px;
-    border-radius: 5px;
-    font-weight: bold;
+    font-weight: 600;
     text-transform: uppercase;
     cursor: pointer;
     user-select: none;
@@ -174,6 +180,18 @@ header {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+  }
+}
+
+.practice-one {
+  padding: 75px 0;
+  .container {
+    display: flex;
+  }
+  h1 {
+    font-weight: 600;
+    margin-bottom: 65px;
+    color: $blue;
   }
 }
 
@@ -206,21 +224,22 @@ header {
   }
 
   &__heading {
+    color: $blue;
     font-size: 24px;
     margin-bottom: 40px;
     font-weight: bold;
     text-align: center;
     text-transform: uppercase;
     width: max-content;
-    margin: 80px auto 50px;
+    margin: 50px auto 50px;
     .heading-bottom-sign {
       &::after {
-        width: 64px;
-        left: -74px;
+        width: 44px;
+        left: -54px;
       }
       &::before {
-        width: 64px;
-        right: -74px;
+        width: 44px;
+        right: -54px;
       }
     }
   }
@@ -336,7 +355,7 @@ header {
   margin: auto;
   width: 16px;
   height: 16px;
-  border: 2px solid $blue;
+  border: 2px solid $bright-blue;
   margin-top: 15px;
   border-radius: 50%;
   &::after,
@@ -347,6 +366,6 @@ header {
     position: absolute;
     top: 50%;
     transform: translate(0, -50%);
-    background-color: $blue;
+    background-color: $bright-blue;
   }
 }
